@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/anysle%20page.css">
+    <style>
+        .ability-map-head {
+            position: relative;
+        }
+        .img-move {
+            position: absolute;
+            top: 90%;
+            background: #fff;
+            left: 50%;
+            opacity: 0;
+        }
+        .map-img:hover~ .img-move {
+            animation: move-img .5s ease-in-out;
+            opacity: 1;
+            animation-fill-mode: forwards;
+        }
+        .img-move:hover {
+            left: 50%;
+            top:55%;
+            opacity: 1;
+            animation-fill-mode: backwards;
+        }
+        @keyframes move-img {
+            0% {
+                top: 90%;
+            }
+            50% {
+                top:70%;
+            }
+            80% {
+                top:45%;
+            }
+            84%{top:46%;}
+            86%{top:50%;}
+            88%{top:54%;}
+            90%{top:58%;}
+            92%{top:62%;}
+            94%{top:65%;}
+            96%{top:62%;}
+            96%{top:58%;}
+            100% {
+                top: 55%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-main">
+        <a href="#" class="logo"></a>
+        <ul class="header-nav">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li>
+                <a href="#">公司真题</a>
+            </li>
+            <li>
+                <a href="#">错题解析</a>
+            </li>
+            <li>
+                <a href="#">专题训练</a>
+            </li>
+            <li>
+                <a href="#">课程</a>
+            </li>
+        </ul>
+        <ul class="header-search">
+            <li class="nav-search">
+                <div class="search bar8">
+                    <form>
+                        <input type="text" placeholder="Search...">
+                        <button type="submit"></button>
+                    </form>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="icon-mobile-phone">APP</a>
+            </li>
+            <li>
+                <a href="#" class="icon-briefcase" target="_blank">企业版</a>
+            </li>
+        </ul>
+        <div class="nav-account">
+            <a href="#" class="nav-account-login" id="nav-login">登录</a>/
+            <a href="#" class="nav-account-reg" data-permalink="">注册</a>
+        </div>
+    </div>
+</header>
+<div class="main analytic-page clearfix">
+    <div class="menu-box">
+        <ul class="menu clearfix">
+            <li class="selected"><a href="http://localhost:63342/webstorm/lbsyun.baidu.com/04anlyse.html">评估报告</a></li>
+            <li><a href="http://localhost:63342/webstorm/lbsyun.baidu.com/05answer.html">答案解析</a></li>
+        </ul>
+    </div>
+    <div class="review-report">
+        <div class="graph-box clearfix">
+            <div class="graph-info">
+                <div class="graph-statistic">
+                    <span class="graph-rank">排名：前62%</span>
+                    <span class="graph-score">得分：0.0</span>
+                </div>
+                <div class="content-item-order graph-detail">
+                    <p><span class="item-label">试卷：</span>
+                        阿里巴巴2017秋招前端笔试题<span class="stars star-3" title="难度系数"></span>
+                    </p>
+                    <p>
+                        <span class="item-label">正确题数：</span>
+                        0/11
+                    </p>
+                    <p>
+                        <span class="item-label">得分：</span>
+                        0.0</p>
+                    <p>
+                        <span class="item-label">用时：</span>
+                        00:00:04</p>
+                    <p>
+                        <a href="javascript:void(0);" class="btn btn-primary js-log-clock nc-req-auth">今日打卡</a>
+                    </p>
+                </div>
+            </div>
+            <div class="ability-map">
+                <div class="ability-map-head clearfix">
+                    <h4>你的技能图谱</h4>
+                    <div class="btn-group btn-group-sm" id="jsRaderSelect">
+                        <div id="jsCpn_2_component_0" class="btn-group btn-group-sm">
+                            <button class="btn btn-default dropdown-toggle">
+                                <span class="js-txt dropdown-value" title="Java工程师" style="width: 123px;">Java工程师</span>
+                                <span class="caret"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <img src="img/skill.png" class="map-img">
+                    <div  class="img-move" style="width:150px; border: 1px solid #eee;padding: 10px 8px;font-size: 13px">
+                        <p style="margin-bottom:10px;">
+                            Java
+                        </p>
+                        <p style="margin-bottom:10px;">
+                            技能值: 0.00 (共100)
+                        </p>
+                        <p style="margin-bottom:10px;">
+                            已完成题数: 0
+                        </p>
+                        <p style="margin-bottom:10px;">
+                            正确率: 0.00%
+                        </p>
+                        <p style="margin-bottom:10px;">
+                            平均难度: 二星
+                        </p>
+                        <p style="margin-bottom:10px;">
+                            全站最高技能值: 100.00
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="module-box review-result">
+            <div class="module-head clearfix">
+                <h1>通过本次练习，你的以下技能评估结果发生了变化。</h1>
+            </div>
+            <div class="module-body clearfix">
+                <div class="result-status rader-progress clearfix nc-req-auth">
+                    <a href="javascript:void(0);" class="btn btn-primary" id="jsExeOther">练习其他技能</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-one">
+        <ul>
+            <li class="footer-box"><a href="#" target="_blank">使用须知
+            </a></li>
+            <li class="footer-box"><a href="#" target="_blank">服务条款</a></li>
+            <li class="footer-box"><a href="#" target="_blank">开发问题</a></li>
+            <li class="footer-box"><a href="#" target="_blank">合作咨询</a></li>
+            <li class="footer-box"><a href="#" target="_blank">意见反馈</a></li>
+            <li class="footer-box"><img src="picture/ewm.png" style="width:80px; position:relative; top:-21px;"></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright © 2005-2018 稻思
+            版权所有</p>
+    </div>
+</footer>
+</body>
+</html>

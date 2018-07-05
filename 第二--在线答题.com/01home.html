@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--header-->
+<header>
+    <div class="header-box">
+        <a href="#" class="logo"><img src="img/稻思.png" style="max-height: 72px"></a>
+        <div class="header-right" id="header-user">
+            <div class="login-bw">
+                <a href="#" class="login-btn">
+                    <span>登 录</span>
+                </a>
+            </div>
+        </div>
+        <ul class="main-menu-li">
+            <span class="menu-line" style="left: 885px; opacity: 0; display: inline;width: 0px;"></span>
+            <li class="main-m-li">
+                <a href="#">
+                    <span style="left: 1143px;display: inline;">首页</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big service">
+                <a href="#">
+                    <span>服务功能</span>
+                </a>
+                <div class="first-div">
+                    <span><a>职业测试</a></span>
+                    <span><a href="02introduce.html">职业简介</a></span>
+                    <span><a href="02introduce.html">答题功能</a></span>
+                </div>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>开发文档</span>
+                </a>
+                <div class="full-menu" data-v="divDoc"></div>
+            </li>
+            <li class="main-m-li" id="count-apiconsoleCon">
+                <a target="_blank" href="#" id="count-apiconsole">
+                    <span>控制台</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>关于我们</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<!--lunbo-->
+<div id="carousel">
+    <ul id="list">
+        <li style="width: 1519px;">
+            <a href='#' target="_blank" class="Feedback-order">查看详情</a>
+            <img src="img/fankui-banner-0416.jpg" style="width:100%" >
+        </li>
+        <li style="width: 1519px;"><img src="img/数据分析.png" style="width:100%;"></li>
+        <li style="width: 1519px;"><img src="img/菱形图片.png" style="width:100%"></li>
+        <li style="width: 1519px;">
+            <a href='#' target="_blank" class="Feedback">查看详情</a>
+            <img src="img/fankui-banner-0416.jpg" style="width:100%" >
+        </li>
+    </ul>
+    <div class="btn btn1"><</div>
+    <div class="btn btn2">></div>
+    <div id="two">
+        <ol id="tags">
+        </ol>
+    </div>
+</div>
+<!--middle-->
+<div class="hp-online">
+    <div class="PAGE_WIDTH flex online-container">
+        <div class="online-box">
+            <a href='#' target="_blank">
+                <svg class="icon icon-bbsEvent" style="width:45px;" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <div>
+                    <p class='title1'>全球API实战应用沙龙<span style='font-style:italic; color:#ff280b; font-size:12px; position:relative; top:-4px; left:6px;'>NEW !</span></p>
+                    <p class='title2'>全球API赋能各行各业开发者</p>
+                </div>
+            </a>
+        </div>
+        <div class="online-box">
+            <a href=#' target="_blank">
+                <svg class="icon icon-anzhuo1" style="width:45px;" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <div>
+                    <p class='title1'>Android定位SDK v7.5<span style='font-style:italic; color:#ff280b; font-size:12px; position:relative; top:-4px; left:6px;'>NEW !</span></p>
+                    <p class='title2'>修复连续定位情况出现Crash的问题</p>
+                </div>
+            </a>
+        </div>
+        <div class="online-box">
+            <a href='#' target="_blank">
+                <svg class="icon icon-ios" style="width:45px;" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <div>
+                    <p class='title1'>iOS地图SDK v3.4.4</p>
+                    <p class='title2'>适配 iOS 11 定位</p>
+                </div>
+            </a>
+        </div>
+        <div class="online-box">
+            <a href='#' target="_blank">
+                <svg class="icon icon-ios" style="width:45px;" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <div>
+                    <p class='title1'>iOS定位SDK v1.1</p>
+                    <p class='title2'>适配 iOS 11 永久定位的设置</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--middle next-->
+<div class="hp-service">
+    <div class="module-title PAGE_WIDTH">
+        <p class='title-main title-main-service'>
+             <!--<img src='picture/doc-title.png'>-->
+        </p>
+        <span class='video-bt' id="count-videobt"></span>
+    </div>
+    <div class="service-wrap">
+        <div class="slideTxtBox">
+            <div class="hd PAGE_WIDTH">
+                <span class="line" style="left: 0px"></span>
+                <ul>
+                    <li>
+                        <svg class="icon icon-dingweiB" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1">
+                            <path d="M511.6185 277.856729c-129.428874 0-234.761771 105.189897-234.76177 234.523771S382.189627 746.951271 511.6185 746.951271c129.475874 0 234.809771-105.237897 234.809771-234.570771s-105.333897-234.523771-234.809771-234.523771z m0 420.332589c-102.5709 0-185.999818-83.332919-185.999818-185.809818 0-102.4289 83.428919-185.761819 185.999818-185.761819s186.047818 83.332919 186.047819 185.761819c0 102.4769-83.476918 185.809819-186.047819 185.809818zM999.618024 488.475523h-68.809933C918.957103 275.609731 748.618269 104.859898 535.999477 92.56791V24.380976C535.999477 10.904989 525.094487 0 511.6185 0s-24.380976 10.904989-24.380976 24.380976v68.187934C274.582732 104.869898 104.201898 275.738731 92.46391 488.714523H24.380976C10.904989 488.713523 0 499.618512 0 513.094499c0 13.475987 10.904989 24.380976 24.380976 24.380976h68.195934C105.359897 749.437268 275.309731 919.172102 487.237524 931.43109v68.187934c0 13.475987 10.904989 24.380976 24.380976 24.380976S535.999477 1013.095011 535.999477 999.619024v-68.187934c212.050793-12.258988 382.050627-182.124822 394.719614-394.192615h68.898933c13.475987 0 24.380976-10.904989 24.380976-24.380976 0-13.476987-10.904989-24.381976-24.380976-24.381976z m-487.999524 395.428614c-204.9048 0-371.570637-166.856837-371.570637-371.904637s166.666837-371.904637 371.570637-371.904637S883.237137 306.9517 883.237137 511.9995 716.5233 883.904137 511.6185 883.904137z"></path>
+                        </svg>
+                        <p>定位</p>
+                    </li>
+                    <li>
+                        <svg class="icon icon-aguiji" width="43px" height="43.00px" viewBox="0 0 1024 1024" version="1.1" style="width:37px;">
+                            <path d="M511.998 1024l-19.096-19.618c-15.48-15.925-379.354-392.222-379.354-605.929C113.542 178.749 292.294 0 511.998 0c219.705 0 398.454 178.749 398.454 398.453 0 213.707-363.874 590.004-379.353 605.929L511.998 1024zM511.998 53.288c-190.329 0-345.167 154.839-345.167 345.166 0 166.34 270.153 468.028 345.167 548.587 75.016-80.555 345.169-382.247 345.169-548.587C857.165 208.125 702.325 53.288 511.998 53.288zM511.998 581.367c-103.814 0-188.298-84.47-188.298-188.298 0-103.829 84.481-188.304 188.298-188.304 103.818 0 188.275 84.474 188.275 188.302C700.273 496.896 615.815 581.367 511.998 581.367zM511.998 258.055c-74.439 0-135.011 60.572-135.011 135.012 0 74.438 60.571 135.011 135.011 135.011 74.442 0 134.987-60.573 134.987-135.012C646.985 318.627 586.438 258.055 511.998 258.055z"></path>
+                        </svg>
+                        <p>服务</p>
+                    </li>
+                    <li>
+                        <svg class="icon icon-shuju1" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1">
+                            <path d="M969.6 928h-864c-19.2 0-32 12.8-32 32s12.8 32 32 32h864c19.2 0 32-12.8 32-32s-12.8-32-32-32zM201.6 832c19.2 0 32-12.8 32-32V448c0-19.2-12.8-32-32-32s-32 12.8-32 32v352c0 19.2 16 32 32 32zM425.6 832c19.2 0 32-12.8 32-32V64c0-19.2-12.8-32-32-32s-32 12.8-32 32v736c0 19.2 16 32 32 32zM617.6 832c19.2 0 32-12.8 32-32V288c0-19.2-12.8-32-32-32s-32 12.8-32 32v512c0 19.2 16 32 32 32zM841.6 832c19.2 0 32-12.8 32-32V416c0-19.2-12.8-32-32-32s-32 12.8-32 32v384c0 19.2 16 32 32 32z"></path>
+                        </svg>
+                        <p>数据</p>
+                    </li>
+                    <li class='li-ie9'>
+                        <svg class="icon icon-fenxi" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1">
+                            <path d="M473.91152 895.509581c-190.767811 0-345.968569-155.200758-345.968569-345.968569s155.200758-345.969593 345.968569-345.969593l0-63.960731c-55.326073 0-109.013833 10.842952-159.572322 32.226982-48.817846 20.649296-92.654236 50.202379-130.291438 87.838557-37.637202 37.637202-67.190285 81.473593-87.837534 130.291438C74.824149 440.526155 63.981197 494.213915 63.981197 549.541011s10.842952 109.013833 32.228005 159.572322c20.648272 48.817846 50.201355 92.654236 87.837534 130.290415 37.637202 37.637202 81.473593 67.190285 130.291438 87.838557 50.558489 21.38403 104.247272 32.226982 159.572322 32.226982s109.013833-10.842952 159.572322-32.226982c48.817846-20.648272 92.654236-50.201355 130.291438-87.838557 37.637202-37.636179 67.190285-81.47257 87.837534-130.290415 21.385053-50.558489 32.228005-104.246249 32.228005-159.572322l-63.960731 0C819.880089 740.308823 664.679331 895.509581 473.91152 895.509581z"></path>
+                            <path d="M927.202397 314.37706c-20.648272-48.817846-50.201355-92.654236-87.837534-130.290415-37.637202-37.637202-81.473593-67.190285-130.291438-87.838557C658.514935 74.863035 604.827175 64.021106 549.501102 64.021106L517.520737 64.021106l0 441.909665 441.909665 0 0-31.980365C959.430402 418.624333 948.58745 364.93555 927.202397 314.37706zM581.481468 441.97004 581.481468 129.446187c165.298743 15.22168 297.30115 147.224086 312.52283 312.52283L581.481468 441.969017z"></path>
+                        </svg>
+                        <p>分析</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd slideTxtBox-bd">
+                <ul class='PAGE_WIDTH selected'>
+                    <li class='service-box'>
+                        <div class='box-left'>
+                            <img src='img/service-sy.png'>
+                        </div>
+                        <div class='box-right' id="count-locationCon">
+                            <h2 class='dw'></h2>
+                            <p><span></span>帮助广大开发者更好解决 “你在哪里” 这个难题；</p>
+                            <p><span></span>支持GPS、WiFi、基站融合定位；</p>
+                            <p><span></span>完美支持各类应用开发者对位置获取的诉求；</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class='PAGE_WIDTH'>
+                    <li class='service-box'>
+                        <div class='box-left'>
+                            <img src='img/service-dlsj.png'>
+                        </div>
+                        <div class='box-right' id="count-cxCon">
+                            <h2 class='cx'></h2>
+                            <p><span></span>为开发者提供基于实时路况的路线规划和导航服务；</p>
+                            <p><span></span>支持驾车、公交、骑行（含电动车）、步行多种智能出行方式；</p>
+                            <p><span></span>满足各类应用开发者对于出行路线的个性化诉求；<p>
+                            <a href="/index.php?title=android-navsdk" target="_blank" id="count-cx">查看详情</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class='PAGE_WIDTH'>
+                    <li class='service-box'>
+                        <div class='box-left'>
+                            <img src='img/service-sy.png'>
+                        </div>
+                        <div class='box-right' id="count-cloudCon">
+                            <h2 class='sj'></h2>
+                            <p><span></span>输出百度海量地理数据；</p>
+                            <p><span></span>提供位置描述、地点检索、地址解析、推荐上车点等数据服务；</p>
+                            <p><span></span>百度&用户私有地理数据融合，满足个性化数据使用需求分析；</p>
+                            <a href="/index.php?title=lbscloud" target="_blank" id="count-cloud">查看详情</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class='PAGE_WIDTH'>
+                    <li class='service-box'>
+                        <div class='box-left'>
+                            <img src='img/service-dlsj.png'>
+                        </div>
+                        <div class='box-right' id="count-fxCon">
+                            <h2 class='fx'></h2>
+                            <p><span></span>提供人口分布、客流分析、设施分布等多项大数据分析服务；</p>
+                            <p><span></span>拥有强大的数据挖掘、可视化展现技术；</p>
+                            <p><span></span>面向规划、房产、商业、零售等多行业提供完善解决方案；</p>
+                            <a href="http://huiyan.baidu.com/" target="_blank" id="count-fx">查看详情</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--开发文档-->
+<div class="hp-doc">
+    <div class="module-title PAGE_WIDTH">
+        <p class='title-main title-main-doc'>
+            <img src="img/doc-title.png">
+        </p>
+    </div>
+    <div class="doc-wrap flex PAGE_WIDTH">
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-anzhuo1" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <p>Android端</p>
+            </div>
+            <div class="box-con">
+                <a href="#" target="_blank">Android 地图 SDK</a>
+                <a href="#" target="_blank">Android 定位 SDK</a>
+                <a href="#" target="_blank">Android 鹰眼轨迹 SDK</a>
+                <a href="#" target="_blank">Android 导航 SDK</a>
+                <a href="#" target="_blank">Android 全景 SDK</a>
+            </div>
+        </div>
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-ios" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1" style="width:35px;">
+                </svg>
+                <p>iOS端</p>
+            </div>
+            <div class="box-con">
+                <a href="/index.php?title=iossdk"  target="_blank">iOS 地图 SDK</a>
+                <a href="/index.php?title=ios-locsdk"  target="_blank">iOS 定位 SDK</a>
+                <a href="/index.php?title=ios-yingyan" target="_blank">iOS 鹰眼轨迹 SDK</a>
+                <a href="/index.php?title=ios-navsdk" target="_blank">iOS 导航 SDK</a>
+                <a href="/index.php?title=ios-panosdk" target="_blank">iOS 全景  SDK</a>
+            </div>
+        </div>
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-web" width="32px" height="48.00px" viewBox="0 0 1024 1024" version="1.1" style="width:31px;">
+                </svg>
+                <p>Web端</p>
+            </div>
+            <div class="box-con">
+                <a href="/index.php?title=jspopular" target="_blank">JavaScript API</a>
+                <a href="/index.php?title=wxjsapi" target="_blank">微信小程序 JavaScript API</a>
+            </div>
+        </div>
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-fwhy" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1" style="width:34px;">
+                </svg>
+                <p>服务接口</p>
+            </div>
+            <div class="box-con">
+                <a href="/index.php?title=lbscloud" target="_blank">LBS云</a>
+                <a href="/index.php?title=yingyan" target="_blank">鹰眼轨迹服务</a>
+                <a href="/index.php?title=webapi" target="_blank">Web 服务 API</a>
+                <a href="/index.php?title=uri" target="_blank">地图调起API</a>
+            </div>
+        </div>
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-gjzc" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1" style="width:34px;">
+                </svg>
+                <p>工具支持</p>
+            </div>
+            <div class="box-con">
+                <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">坐标拾取器</a>
+                <a href="http://api.map.baidu.com/lbsapi/createmap/index.html" target="_blank">地图生成器</a>
+                <a href="http://api.map.baidu.com/mapCard/" target="_blank">地图名片</a>
+                <a href="/index.php?title=coordinate" target="_blank">坐标系说明</a>
+                <a href="/img-editor.html" target="_blank">底图编辑工具</a>
+                <a href="http://quanjing.baidu.com/apipickup/" target="_blank">全景选择工具</a>
+            </div>
+        </div>
+        <div class="doc-box">
+            <div class="box-top">
+                <svg class="icon icon-qt" width="48px" height="48.00px" viewBox="0 0 1024 1024" version="1.1">
+                </svg>
+                <p>其他</p>
+            </div>
+            <div class="box-con">
+                <a href="/data/mydata" target="_blank">数据管理平台</a>
+                <a href="/trace/admin/service" target="_blank">鹰眼轨迹管理平台</a>
+                <a href="/index.php?title=open/openmap" target="_blank">Openmap专题地图</a>
+                <a href="/index.php?title=open/dev-res" target="_blank">开发资源</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer>
+    <div class="footer-one">
+        <ul>
+            <li class="footer-box"><a href="#" target="_blank">使用须知
+            </a></li>
+            <li class="footer-box"><a href="#" target="_blank">服务条款</a></li>
+            <li class="footer-box"><a href="#" target="_blank">开发问题</a></li>
+            <li class="footer-box"><a href="#" target="_blank">合作咨询</a></li>
+            <li class="footer-box"><a href="#" target="_blank">意见反馈</a></li>
+            <li class="footer-box"><img src="picture/ewm.png" style="width:80px; position:relative; top:-21px;"></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright © 2005-2018 稻思
+            版权所有</p>
+    </div>
+</footer>
+<script type="text/javascript">
+    //  声明变量
+    var one=document.getElementById("carousel");
+    var oneoffset=one.offsetWidth;
+    var ul=document.getElementById("list");
+    var ularry=ul.children;
+    var left=document.getElementsByClassName("btn1")[0];
+    var right=document.getElementsByClassName("btn2")[0];
+    var ol=document.getElementById("tags");
+    var timer=null;
+    var pic= 0,dot=0;
+    var headerul=document.getElementsByClassName("main-menu-li")[0];
+    var lispan=document.getElementsByClassName("menu-line")[0];
+    var headarry=headerul.children;
+    var a=headerul.getElementsByTagName("span");
+    var line=document.querySelector("span.line");
+    var llii=document.querySelectorAll("div.hd ul li");
+//    定位上浮动画
+    var bd=document.getElementsByClassName("slideTxtBox-bd")[0].children;
+    var bp=document.querySelectorAll(".PAGE_WIDTH ul li svg");
+    for(var k=0;k<bp.length;k++)
+    {
+        bp[k].index=k;
+        bd[k].index=k;
+        bp[k].onmouseover= function () {
+            line.style.left=this.index*375+"px";
+            for(let j=0;j<bp.length;j++){
+                bd[j].className="PAGE_WIDTH";
+            }
+                    bp[this.index].classList.toggle("active");
+                    bd[this.index].classList.toggle("selected");
+        }
+    }
+
+    //获取视窗大小
+    var bo=document.body.clientWidth;
+    var carli=document.querySelectorAll("#list li");
+    for(var i=0;i<carli.length;i++){
+        carli[i].style.width=parseInt(bo)+"px";
+    }
+
+    for(var i=0;i< a.length;i++){
+        a[i].onmouseover=function(e){
+            e.stopPropagation();
+        }
+    }
+    function navAnimation() {
+        for(var i=1;i<headarry.length;i++){
+            headarry[i].onmouseover= function () {
+                var tag=this.offsetLeft;
+                var target=this.clientWidth;
+                if (this.timers){
+                    clearInterval(this.timers);
+                }
+                this.timers=setInterval(function(){
+                    if(parseInt(lispan.style.left)<tag){
+                        lispan.style.left=lispan.offsetLeft+3+"px";
+                    }else if(parseInt(lispan.style.left)>tag){
+                        lispan.style.left=lispan.offsetLeft-2+"px";
+                    } else {clearInterval(this.timers);}
+                },4);
+
+                var timer=setInterval(function () {
+                    if(parseInt(lispan.style.width)<Math.ceil(target)){
+                        lispan.style.width=lispan.offsetWidth+6+"px";
+                    }
+                    else{
+                        clearInterval(timer);
+                    }
+                },30);
+                lispan.style.opacity="1";
+                this.onmouseleave= function () {
+                    clearInterval(this.timers);
+                    lispan.style.opacity="0";
+                    lispan.style.width=0+"px";
+                }
+            };
+        }
+    }
+    navAnimation();
+
+    //  动态生成ol的li元素 and clone第一张图片来实现无缝滚动
+    for (let i=0;i<ularry.length-1;i++){
+        var li=document.createElement("li");
+        ol.appendChild(li);
+    }
+    var olarry=ol.children;
+
+    //  创建过渡的函数
+    function animate(obj,target){
+        clearInterval(obj.timer);
+        var speed=obj.offsetLeft<target?40:-40;
+        obj.timer=setInterval(function (){
+            var result=target-obj.offsetLeft;
+            obj.style.left=obj.offsetLeft+speed+"px";
+            if(Math.abs(result)<=Math.abs(speed)){
+                clearInterval(obj.timer);
+                obj.style.left=target+"px";
+            }
+        },10);
+    }
+    //  为每个小圆点绑定事件
+    for(let i=0;i<olarry.length;i++){
+        olarry[i].index=i;
+        olarry[i].onmouseover=function(){
+            for (let j=0;j<olarry.length;j++){
+                olarry[j].className="";
+            }
+            olarry[this.index].className="now";
+            var target=-this.index*oneoffset;
+            animate(ul,target);
+        }
+    }
+
+    //  实现自动轮播功能
+    olarry[0].className="now";
+    function autoPlay(){
+        if(pic==ularry.length-1){
+            ul.style.left=0+"px";
+            pic=0;
+        }
+        pic++;
+        var target=-pic*oneoffset;
+        animate(ul,target);
+        dot++;
+        if(dot>olarry.length-1){
+            dot=0
+        }
+        for(let i=0;i<olarry.length;i++)
+        {
+            olarry[i].className="";
+        }
+        olarry[dot].className="now";
+    }
+    timer=setInterval(autoPlay,5000);
+
+    //  绑定左右箭头的事件
+    one.onmouseover=function(){
+        clearInterval(timer);
+    };
+    one.onmouseout=function(){
+        timer=setInterval(autoPlay,5000) ;
+    };
+    right.onclick=function(){
+        autoPlay();
+    };
+    left.onclick=function(){
+        if (pic==0){
+            pic=ularry.length-1;
+            ul.style.left=-pic*oneoffset+"px";
+        }
+        pic--;
+        var target=-pic*oneoffset;
+        animate(ul,target);
+        if(dot==0) {
+            dot = olarry.length;
+        }
+        dot--;
+        for (let j= 0,olen=olarry.length;j<olen;j++){
+            olarry[j].className=""
+        }
+        olarry[dot].className="now";
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/introduce.css">
+    <script>
+        window.onload=function(){
+          var ul=document.getElementsByClassName("gallery-tab")[0];
+            var div=document.getElementsByClassName("galleryall");
+            var li=document.getElementsByClassName("gallery-tab-item");
+            ul.onclick=function(e){
+                var e=e||window.event;
+                var target= e.target||event.target;
+                if(target.nodeName.toLowerCase()=="li"){
+                    var index=target.getAttribute("index");
+                    if(target.className.indexOf("act")>=0){
+                        return;
+                    }else {
+                        for(var i=0;i<div.length;i++){
+                            if(index==i){
+                                target.className="gallery-tab-item act";
+                                div[i].className="galleryall activity";
+                            }else{
+                                li[i].className="gallery-tab-item";
+                                div[i].className="galleryall";
+                            }
+                        }
+                    }
+                }
+            }
+            var headerul=document.getElementsByClassName("main-menu-li")[0];
+            var lispan=document.getElementsByClassName("menu-line")[0];
+            var headarry=headerul.children;
+            var a=headerul.getElementsByTagName("span");
+            for(var i=0;i< a.length;i++){
+                a[i].onmouseover=function(e){
+                    e.stopPropagation();
+                }
+            }
+            for(let i=1;i<headarry.length;i++){
+                headarry[i].index=i;
+                headarry[i].onmouseover= function () {
+                    var tag=headarry[this.index].offsetLeft;
+                    var timers=setInterval(function(){
+                        if(parseInt(lispan.style.left)<tag-6){
+                            lispan.style.left=lispan.offsetLeft+4+"px";
+                            console.log(parseInt(lispan.style.left));
+                        }else if(parseInt(lispan.style.left)>tag+6){
+                            lispan.style.left=lispan.offsetLeft-4+"px";
+                        } else {clearInterval(timers);}
+                    },1);
+
+                    var target=headarry[this.index].clientWidth;
+                    var timer=setInterval(function () {
+                        if(parseInt(lispan.style.width)<target){
+                            lispan.style.width=lispan.offsetWidth+3+"px";
+                        }
+                        else{clearInterval(timer);}
+                    },12);
+                    lispan.style.opacity="1";
+                    console.log(lispan.style.width)
+                }
+                headarry[i].onmouseleave= function () {
+                    lispan.style.opacity="0";
+                }
+            }
+            headerul.onmouseleave= function () {
+                lispan.style.width=0+"px";
+                lispan.style.opacity="0";
+            };
+        };
+    </script>
+</head>
+<body>
+<header style="background: rgba(26,35,46,1);">
+    <div class="header-box">
+        <a href="#" class="logo"></a>
+        <div class="header-right" id="header-user">
+            <div class="login-bw">
+                <a href="#" class="login-btn">
+                    <span>登 录</span>
+                </a>
+            </div>
+        </div>
+        <ul class="main-menu-li">
+            <span class="menu-line" style="left: 885px; opacity: 0; display: inline;width: 0px;"></span>
+            <li class="main-m-li">
+                <a href="#">
+                    <span style="left: 1143px;display: inline;">首页</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big service">
+                <a href="#">
+                    <span>服务功能</span>
+                </a>
+                <div class="first-div">
+                    <span><a>职业测试</a></span>
+                    <span><a href="02introduce.html">职业简介</a></span>
+                    <span><a href="02introduce.html">答题功能</a></span>
+                </div>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>开发文档</span>
+                </a>
+                <div class="full-menu" data-v="divDoc"></div>
+            </li>
+            <li class="main-m-li" id="count-apiconsoleCon">
+                <a target="_blank" href="#" id="count-apiconsole">
+                    <span>控制台</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>关于我们</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="service-banner" style="background: #24262b;">
+    <img class="service-banner-bg" src="picture/geodata_02.jpg">
+    <div class="service-profile">
+        <div class="profile-contents">
+            <p class="service-name">LBS.云服务</p>
+            <p class="service-describe">LBS.云是百度地图针对LBS开发者推出的平台级服务，结合已有的地图API和SDK服务，通过开放服务端存储和计算能力，提供海量位置数据（点、面数据）的实时存储、检索、展示一体化解决方案。</p>
+            <div class="emphasis">
+                <a target="_blank" href="#">立即使用</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="mbody" class="mbody">
+    <p class="mwrapper clearfix">
+        <div id="sidebar">
+            <div class="servename" >
+                LBS.云服务
+            </div>
+            <div id="sidebar-scrollTop">
+                        <ul  class="first-sidebar-nav" >
+                            <li class="selected" style="border-top: none;">
+                                <a class="onebtn" href="#" >概述</a>
+                            </li>
+                            <li>
+                                <a class="onebtn" href="http://localhost:63342/webstorm/lbsyun.baidu.com/0201.html">学习方案&gt;&gt;</a>
+                            </li>
+                            <li>
+                                <a class="onebtn" href="http://localhost:63342/webstorm/lbsyun.baidu.com/0202.html">学习资料&gt;&gt;</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="sidebar-conten">
+            <div class="gallery-content">
+                <ul class="gallery-tab">
+                    <li class="gallery-tab-item act" index="0">Java开发工程师<span></span></li>
+                    <li class="gallery-tab-item" index="1">Java测试工程师<span></span></li>
+                    <li class="gallery-tab-item" index="2">Java需求工程师<span></span></li>
+                </ul>
+            </div>
+            <div class="galleryall activity">
+                    <div class="bluetitle"><p>功能介绍</p></div>
+                    <div class="serveintor-min">
+                        <div class="serveintortxt">
+                            <div class="serveintorleft">
+                                <div class="serveintoor-title">云端数据存储</div>
+                                <p>无须部署服务器，通过LBS.云数据管理平台即可完成海量数据云端存储。 免费开放千万级数据存储空间； 支持单个数据表百G存储空间； 支持每秒万级并发读写。<br>提供开发者自定义扩展字段的定义和存储，允许在检索端自定义扩展字段的筛选和排序功能。
+                                    <br>
+                                    设置为数值类型的扩展字段将自动索引建库，并允许数值区间筛选和排序功能。
+                                    <br>
+                                    设置为字符串类型的扩展字段将自动切词进入检索引擎，以便参与关键字检索，方便业务实现。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="serveintortxt">
+                            <div class="serveintorleft">
+                                <div class="serveintoor-title">云端数据检索</div>
+                                <p>基于云端健壮的地理计算能力，实现海量数据的实时云检索。 支持周边、区域等多种检索方式； 开放高性能大数据计算集群，实现云端数据实时检索。<br>在用户数据量级别在50万以下时，云检索引擎提供一秒以内实时生效的高性能检索功能。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="serveintortxt">
+                            <div class="serveintorleft">
+                                <div class="serveintoor-title">云端数据展示</div>
+                                <p>通过云麻点服务，快速实现海量位置数据地图展示。 开放云端渲染引擎的计算能力，实现亿万级数据渲染； 支持Web、Android、iOS的多端同步展示。<br>在您使用云存储功能完成数据存储的同时，我们将自动为这些存储在云端的位置数据进行图层渲染；<br>使用Javascript API， 创建customLayer类生成麻点图形式的用户数据图层，将其叠加在百度地图上，便实现海量用户数据的地图展示效果。具体可参考： Javascript API的开发指南_用户数据图层服务。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="galleryall">
+                <div class="bluetitle"><p>功能详情</p></div>
+                <div class="serveintor-min">
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据存储</div>
+                            <p>无须部署服务器，通过LBS.云数据管理平台即可完成海量数据云端存储。 免费开放千万级数据存储空间； 支持单个数据表百G存储空间； 支持每秒万级并发读写。<br>提供开发者自定义扩展字段的定义和存储，允许在检索端自定义扩展字段的筛选和排序功能。
+                                <br>
+                                设置为数值类型的扩展字段将自动索引建库，并允许数值区间筛选和排序功能。
+                                <br>
+                                设置为字符串类型的扩展字段将自动切词进入检索引擎，以便参与关键字检索，方便业务实现。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据检索</div>
+                            <p>基于云端健壮的地理计算能力，实现海量数据的实时云检索。 支持周边、区域等多种检索方式； 开放高性能大数据计算集群，实现云端数据实时检索。<br>在用户数据量级别在50万以下时，云检索引擎提供一秒以内实时生效的高性能检索功能。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据展示</div>
+                            <p>通过云麻点服务，快速实现海量位置数据地图展示。 开放云端渲染引擎的计算能力，实现亿万级数据渲染； 支持Web、Android、iOS的多端同步展示。<br>在您使用云存储功能完成数据存储的同时，我们将自动为这些存储在云端的位置数据进行图层渲染；<br>使用Javascript API， 创建customLayer类生成麻点图形式的用户数据图层，将其叠加在百度地图上，便实现海量用户数据的地图展示效果。具体可参考： Javascript API的开发指南_用户数据图层服务。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="galleryall">
+                <div class="bluetitle"><p>没有</p></div>
+                <div class="serveintor-min">
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据存储</div>
+                            <p>无须部署服务器，通过LBS.云数据管理平台即可完成海量数据云端存储。 免费开放千万级数据存储空间； 支持单个数据表百G存储空间； 支持每秒万级并发读写。<br>提供开发者自定义扩展字段的定义和存储，允许在检索端自定义扩展字段的筛选和排序功能。
+                                <br>
+                                设置为数值类型的扩展字段将自动索引建库，并允许数值区间筛选和排序功能。
+                                <br>
+                                设置为字符串类型的扩展字段将自动切词进入检索引擎，以便参与关键字检索，方便业务实现。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据检索</div>
+                            <p>基于云端健壮的地理计算能力，实现海量数据的实时云检索。 支持周边、区域等多种检索方式； 开放高性能大数据计算集群，实现云端数据实时检索。<br>在用户数据量级别在50万以下时，云检索引擎提供一秒以内实时生效的高性能检索功能。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="serveintortxt">
+                        <div class="serveintorleft">
+                            <div class="serveintoor-title">云端数据展示</div>
+                            <p>通过云麻点服务，快速实现海量位置数据地图展示。 开放云端渲染引擎的计算能力，实现亿万级数据渲染； 支持Web、Android、iOS的多端同步展示。<br>在您使用云存储功能完成数据存储的同时，我们将自动为这些存储在云端的位置数据进行图层渲染；<br>使用Javascript API， 创建customLayer类生成麻点图形式的用户数据图层，将其叠加在百度地图上，便实现海量用户数据的地图展示效果。具体可参考： Javascript API的开发指南_用户数据图层服务。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="right">
+        <div class="search">
+            <h4 class="right-title">搜索</h4>
+            <br>
+            <input type="search" placeholder="search..">
+            <button class="btn-search">搜索</button>
+        </div>
+        <div class="tags">
+            <h4 class="right-title">标签云</h4>
+            <p><span>LBS</span><span>云检索</span><span>云储存</span>
+                <span>云麻点</span><span>高性能</span><span>开发指南</span><span>云储存</span><span>云麻点</span></p>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-one">
+        <ul>
+            <li class="footer-box"><a href="#" target="_blank">使用须知
+            </a></li>
+            <li class="footer-box"><a href="#" target="_blank">服务条款</a></li>
+            <li class="footer-box"><a href="#" target="_blank">开发问题</a></li>
+            <li class="footer-box"><a href="#" target="_blank">合作咨询</a></li>
+            <li class="footer-box"><a href="#" target="_blank">意见反馈</a></li>
+            <li class="footer-box"><img src="picture/ewm.png" style="width:80px; position:relative; top:-21px;"></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright © 2005-2018 稻思
+            版权所有</p>
+    </div>
+</footer>
+</body>
+</html>

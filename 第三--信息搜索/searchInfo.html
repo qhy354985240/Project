@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+    </div>
+    <div class="hdr">
+        <div class="nav">
+            <ul>
+                <li class="on">
+                    <a href="#" class="v1">首页</a>
+                </li>
+                <li><a href="#" class="v1" onClick="cotn_show()">登录/注册</a></li>
+            </ul>
+            <em style="left: 8px;"></em>
+        </div>
+        <a href="personsetting.html" class="a-login">个人中心</a>
+    </div>
+</div>
+<div class="homepage-header">
+    <div class="search">
+        <section>
+            <form class="searchform" action="/search/">
+                <input   name="search" id="inputField1" type="text" class="query autocomplete" title="Search" placeholder="Search for ..." autocomplete="off">
+                <button class="btn btn-large btn-search" type="submit">
+                    <i class="icon icon-search"></i>
+                </button>
+            </form>
+        </section>
+        <p class="hidden-phone tagline">
+        </p><h1>Search through 2,388,680 person information</h1>
+    </div>
+</div>
+<div class="content">
+    <div class="main">
+        <div class="col-3">
+            <div class="color">
+                <span class="nicheng">天天向上</span>
+            </div>
+            <div class="col-3-body">
+                <div class="image">
+                    <div class="image-content">
+                    </div>
+                </div>
+                <div class="icon-div">
+                    <i class="icon-weibo hide">
+                        <div class="weibo-body">
+                            <span>微博:</span>
+                            <span class="weibo-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-weixin hide">
+                        <div class="weixin-body">
+                            <span>微信:</span>
+                            <span class="weixin-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-qq hide">
+                        <div class="qq-body">
+                            <span>QQ:</span>
+                            <span class="qq-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-fb">
+                        <div class="fb-body">
+                            <span>Facebook:</span>
+                            <span class="fb-copy">1234sssssssssssssssssss567</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-mail hide">
+                        <div class="mail-body">
+                            <span>邮箱:</span>
+                            <span class="qq-copy">123456@qq.com</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-luntan ">
+                        <div class="luntan-body">
+                            <span>论坛:</span>
+                            <span class="luntan-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#">天涯论坛</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+
+
+                    <i class="icon-blog ">
+                        <div class="blog-body">
+                            <span>博客:</span>
+                            <span class="blog-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">CSDN</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                    <i class="icon-google ">
+                        <div class="google-body">
+                            <span>G+:</span>
+                            <span class="google-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">Google+</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                    <i class="icon-wordpress ">
+                        <div class="wordpress-body">
+                            <span>WP:</span>
+                            <span class="wordpress-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">wordpress</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                </div>
+            </div>
+            <div class="introduce"></div>
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+    <!--查看更多后以下显示出来-->
+    <div class="main" style="display: none;">
+        <div class="col-3">
+            <div class="color">
+                <span class="nicheng">天天向上</span>
+            </div>
+            <div class="col-3-body">
+                <div class="image">
+                    <div class="image-content">
+                    </div>
+                </div>
+                <div class="icon-div">
+                    <i class="icon-weibo hide">
+                        <div class="weibo-body">
+                            <span>微博:</span>
+                            <span class="weibo-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-weixin hide">
+                        <div class="weixin-body">
+                            <span>微信:</span>
+                            <span class="weixin-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-qq hide">
+                        <div class="qq-body">
+                            <span>QQ:</span>
+                            <span class="qq-copy">123456789</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-fb">
+                        <div class="fb-body">
+                            <span>Facebook:</span>
+                            <span class="fb-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-mail hide">
+                        <div class="mail-body">
+                            <span>邮箱:</span>
+                            <span class="qq-copy">123456@qq.com</span>
+                            <span  class="copy">复制</span>
+                        </div>
+                    </i>
+                    <i class="icon-luntan ">
+                        <div class="luntan-body">
+                            <span>论坛:</span>
+                            <span class="luntan-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#">天涯论坛</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+
+
+                    <i class="icon-blog ">
+                        <div class="blog-body">
+                            <span>博客:</span>
+                            <span class="blog-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">CSDN</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                    <i class="icon-google ">
+                        <div class="google-body">
+                            <span>G+:</span>
+                            <span class="google-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">Google+</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                    <i class="icon-wordpress ">
+                        <div class="wordpress-body">
+                            <span>WP:</span>
+                            <span class="wordpress-copy">1234567</span>
+                            <span  class="copy">复制</span>
+                            <p class="address">
+                                <span>地址:</span>
+                                <span><a href="#" target="_blank">wordpress</a></span>
+                                <span class="copy">复制</span>
+                            </p>
+                        </div>
+                    </i>
+                </div>
+            </div>
+            <div class="introduce"></div>
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#nowhere" class="more-button" onclick="moreShow();">
+             查看更多
+        </a>
+    </div>
+</div>
+<!--登录注册模块-->
+<div class="cotn_principal" onclick="s_hide();">
+    <div class="cont_centrar">
+        <div class="cont_login">
+            <div class="cont_info_log_sign_up">
+                <div class="col_md_login">
+                    <div class="cont_ba_opcitiy">
+                        <h2>登录</h2>
+                        <p>Welcome to search for the information you want</p>
+                        <button class="btn_login" onClick="cambiar_login()">LOGIN</button>
+                    </div>
+                </div>
+                <div class="col_md_sign_up">
+                    <div class="cont_ba_opcitiy">
+                        <h2>注册</h2>
+                        <p>Welcome to search for the information you want</p>
+                        <button class="btn_sign_up" onClick="cambiar_sign_up()">SIGN UP</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_back_info">
+                <div class="cont_img_back_grey">
+                    <img src="img/po.jpg" alt="" /> </div>
+            </div>
+            <div class="cont_forms" >
+                <div class="cont_img_back_">
+                    <img src="img/po.jpg" alt="" /> </div>
+                <form class="cont_form_login"> <a href="#" onClick="ocultar_login_sign_up()" >X</a>
+                    <h2>登录</h2>
+                    <input type="text" placeholder="用户名" />
+                    <input type="password" placeholder="密码" />
+                    <button class="btn_login" onClick="cambiar_login()">LOGIN</button>
+                </form>
+                <form class="cont_form_sign_up">
+                    <a href="#" onClick="ocultar_login_sign_up()"><i class="material-icons" style="font-style: normal">X</i></a>
+                    <h2>注册</h2>
+                    <input type="text" placeholder="用户名" required>
+                    <input type="password" placeholder="密码" required>
+                    <input type="password" placeholder="确认密码" required>
+                    <input type="email" placeholder="邮箱" required>
+                    <button class="btn_sign_up" onClick="cambiar_sign_up()">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+<script>
+    function moreShow(){
+        var main=document.querySelectorAll(".main")[1];
+        main.style.display='block';
+    }
+    var icon=document.querySelectorAll(".icon-div");
+    for(var i=0;i<icon.length;i++) {
+        icon[i].onclick = function (ev) {
+            var ev = ev || window.event;
+            var target = ev.target || ev.srcElement;
+            if (target.className == "copy") {
+                var e=target.parentNode.children[1].innerText;
+                var oInput = document.createElement('input');
+                oInput.value = e;
+                document.body.appendChild(oInput);
+                oInput.select();      // 选择对象
+                document.execCommand("Copy");   // 执行浏览器复制命令
+                oInput.className = 'oInput';
+                oInput.style.display='none';
+                alert('复制成功');
+            }
+            target = target.parentNode;//当嵌套了多个后代元素时，进行遍历向上
+        }
+    }
+</script>
+</body>
+</html>

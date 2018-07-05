@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/introduce.css">
+    <script>
+        window.onload=function(){
+            var headerul=document.getElementsByClassName("main-menu-li")[0];
+            var lispan=document.getElementsByClassName("menu-line")[0];
+            var headarry=headerul.children;
+            var a=headerul.getElementsByTagName("span");
+            for(var i=0;i< a.length;i++){
+                a[i].onmouseover=function(e){
+                    e.stopPropagation();
+                }
+            }
+            for(let i=1;i<headarry.length;i++){
+                headarry[i].index=i;
+                headarry[i].onmouseover= function () {
+                    var tag=headarry[this.index].offsetLeft;
+                    var timers=setInterval(function(){
+                        if(parseInt(lispan.style.left)<tag-6){
+                            lispan.style.left=lispan.offsetLeft+4+"px";
+                            console.log(parseInt(lispan.style.left));
+                        }else if(parseInt(lispan.style.left)>tag+6){
+                            lispan.style.left=lispan.offsetLeft-4+"px";
+                        } else {clearInterval(timers);}
+                    },2);
+
+                    var target=headarry[this.index].clientWidth;
+                    var timer=setInterval(function () {
+                        if(parseInt(lispan.style.width)<target){
+                            lispan.style.width=lispan.offsetWidth+3+"px";
+                        }
+                        else{clearInterval(timer);}
+                    },15);
+                    lispan.style.opacity="1";
+                };
+                headarry[i].onmouseleave= function () {
+                    lispan.style.opacity="0";
+                }
+            }
+            headerul.onmouseleave= function () {
+                lispan.style.width=0+"px";
+                lispan.style.opacity="0";
+            };
+        };
+    </script>
+</head>
+<body>
+<header style="background: rgba(26,35,46,1);">
+    <div class="header-box">
+        <a href="#" class="logo"></a>
+        <div class="header-right" id="header-user">
+            <div class="login-bw">
+                <a href="#" class="login-btn">
+                    <span>登 录</span>
+                </a>
+            </div>
+        </div>
+        <ul class="main-menu-li">
+            <span class="menu-line" style="left: 885px; opacity: 0; display: inline;width: 0px;"></span>
+            <li class="main-m-li">
+                <a href="#">
+                    <span style="left: 1143px;display: inline;">首页</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big service">
+                <a href="#">
+                    <span>服务功能</span>
+                </a>
+                <div class="first-div">
+                    <span><a>职业测试</a></span>
+                    <span><a href="02introduce.html">职业简介</a></span>
+                    <span><a href="02introduce.html">答题功能</a></span>
+                </div>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>开发文档</span>
+                </a>
+                <div class="full-menu" data-v="divDoc"></div>
+            </li>
+            <li class="main-m-li" id="count-apiconsoleCon">
+                <a target="_blank" href="#" id="count-apiconsole">
+                    <span>控制台</span>
+                </a>
+            </li>
+            <li class="main-m-li menu-big">
+                <a href="javascript:;">
+                    <span>关于我们</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="service-banner" style="background: #24262b;">
+    <img class="service-banner-bg" src="picture/geodata_02.jpg">
+    <div class="service-profile">
+        <div class="profile-contents">
+            <p class="service-name">LBS.云服务</p>
+            <p class="service-describe">LBS.云是百度地图针对LBS开发者推出的平台级服务，结合已有的地图API和SDK服务，通过开放服务端存储和计算能力，提供海量位置数据（点、面数据）的实时存储、检索、展示一体化解决方案。</p>
+            <div class="emphasis">
+                <a target="_blank" href="#">立即使用</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="used-wrap flex">
+    <div class="used-box">
+        <a href="#" target="_blank" >
+            <div class="used-box-pic">
+                <img src="picture/hp-use11.png" class="img2">
+                <img src="picture/hp-use1.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>共享出行</h2>
+                </div>
+                <p>帮助共享出行用户快速集成地图能力，迅速拓展市场。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="used-box" id="count-fwCon">
+        <a href="#" target="_blank" >
+            <div class="used-box-pic">
+                <img src="picture/hp-use22.png" class="img2">
+                <img src="picture/hp-use2.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>上门服务</h2>
+                </div>
+                <p>介绍上门服务通用LBS解决方案，帮助O2O开发者快速清晰地构建系统。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="used-box" >
+        <a href="#" target="_blank" >
+            <div class="used-box-pic">
+                <img src="picture/hp-use33.png" class="img2">
+                <img src="picture/hp-use3.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>智慧交通</h2>
+                </div>
+                <p>互联网+智慧交通，共建交通大数据生态。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="used-box" >
+        <a href="#" target="_blank" >
+            <div class="used-box-pic">
+                <img src="picture/hp-use55.png" class="img2">
+                <img src="picture/hp-use5.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>快递物流</h2>
+                </div>
+                <p>结合通用物流配送场景，介绍地图产品如何帮助开发者快速搭建物流系统。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="used-box" id="count-logisticsCon">
+        <a href="#" target="_blank" id="count-logistics">
+            <div class="used-box-pic">
+                <img src="picture/hp-use66.png" class="img2">
+                <img src="picture/hp-use6.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>房产行业</h2>
+                </div>
+                <p>结合房产类用户使用场景，介绍地图服务在房产类产品中的应用。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="used-box" >
+        <a href="#" target="_blank" >
+            <div class="used-box-pic">
+                <img src="picture/hp-use77.png" class="img2">
+                <img src="picture/hp-use7.png" class="img1">
+            </div>
+            <div class="used-box-text">
+                <div class="title">
+                    <h2>商业地理</h2>
+                </div>
+                <p>勾勒顾客画像，展现顾客轨迹；竞品分析对比，客流来源去向。</p>
+                <div class="title-icon-wrap">
+                    <div class="icon-wrap">
+                        <i class="title-icon share"></i>
+                        <i class="title-icon collect"></i>
+                        <i class="title-icon download"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+</div>
+<footer>
+    <div class="footer-one">
+        <ul>
+            <li class="footer-box"><a href="#" target="_blank">使用须知
+            </a></li>
+            <li class="footer-box"><a href="#" target="_blank">服务条款</a></li>
+            <li class="footer-box"><a href="#" target="_blank">开发问题</a></li>
+            <li class="footer-box"><a href="#" target="_blank">合作咨询</a></li>
+            <li class="footer-box"><a href="#" target="_blank">意见反馈</a></li>
+            <li class="footer-box"><img src="picture/ewm.png" style="width:80px; position:relative; top:-21px;"></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <p>Copyright © 2005-2018 稻思
+            版权所有</p>
+    </div>
+</footer>
+</body>
+</html>

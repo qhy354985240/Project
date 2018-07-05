@@ -1,0 +1,950 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.homepage-header {
+  background-color: #232328;
+  color: #e0e1e4;
+  padding: 150px 0 90px;
+}
+.homepage-header .search {
+  text-align: center;
+  margin: 0 auto;
+}
+.homepage-header .searchform {
+  margin-bottom: 27px;
+}
+.homepage-header .searchform input {
+  border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border: none;
+  outline: none;
+  padding: 0 15px;
+  font-size: 18px;
+  vertical-align: top;
+}
+.homepage-header input.query {
+  width: 600px;
+  height: 46px!important;
+}
+.homepage-header .searchform button {
+  height: 46px!important;
+  padding: 0 20px;
+  text-align: center;
+  margin-left: -10px;
+  border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -moz-border-radius: 0 2px 2px 0;
+  outline: none;
+  border: 0;
+}
+.searchform .btn:not(.btn-primary), .searchform input:not(:focus) {
+  background: #505050;
+  color: #fff;
+}
+.searchform input:focus{
+  background-color: #fff;
+}
+.searchform input:focus~.btn{
+  background: #21955b;
+}
+.searchform button, .searchform input {
+  transition: background .15s ease-out;
+}
+
+/*icon*/
+.icon{
+  position:relative;
+  display:block;
+  width:30px;
+  height:30px;
+  font-size:10px;
+}
+.icon:before,.icon:after {
+  content:"";
+  position:absolute;
+  left:0;
+  background:transparent;
+  font-size:1em;
+}
+.icon-search:after {
+  left:60%;
+  top:70%;
+  width:42%;height:12%;
+  background:#fff;
+  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+}
+.icon-search:before {
+  left:10%;top:5%;
+  width:50%;height:50%;
+  border:.4em solid #fff;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -o-border-radius:50%;
+}
+
+/*header*/
+.header {
+  position: absolute;
+  height: 70px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+  padding: 0 15px;
+}
+.header:after, .header:before {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.logo {
+  line-height: 70px;
+  float: left;
+}
+.header .hdr {
+  float: right;
+  margin-top: 20px;
+}
+.nav {
+  float: left;
+  margin-top: 5px;
+  position: relative;
+}
+ul,ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.nav li {
+  float: left;
+  padding: 0 8px;
+}
+.nav li .v1 {
+  font-size: 18px;
+  color: #fff;
+  padding: 0 15px;
+  display: block;
+  padding-bottom: 8px;
+  transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  -webkit-transition: .3s;
+}
+.nav li.on .v1, .nav li:hover .v1 {
+  color: #fff;
+}
+
+.a-login {
+  width: auto;
+  height: 32px;
+  display: block;
+  line-height: 32px;
+  text-align: center;
+  font-weight: 600;
+  padding: 0 15px;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  float: right;
+  transition: .3s;
+  -moz-transition: .3s;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+}
+.a-login:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/*content*/
+.content {
+  width: 100%;
+  min-height: 1000px;
+  background-color: #F2F2F2;
+}
+.main {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+}
+.main:after, .main:before {
+  display: block;
+  content: "clear";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+.col-3 {
+  width: 30%;
+  height: 220px;
+  float: left;
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 30px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  transition: all .3s linear;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+}
+
+.col-3:hover {
+  box-shadow: 0 9px 20px 4px rgba(0,0,0,.5);
+}
+.col-3-body {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+.image {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -100px;
+  left: -20px;
+  overflow: hidden;
+  z-index: 55;
+}
+.image-content {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: url(../img/touxiang.jpg) 10% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition:  -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+}
+.col-3:hover .image-content{
+  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+}
+.col-3 i {
+  float: left;
+  margin: 5px 10px;
+}
+.icon-div {
+  width: 180px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+  bottom: 0;
+}
+
+/*小图片*/
+.icon-weibo {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/weibo.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-weibo:hover {
+  background: url(../icon/weibo1.png) no-repeat center;
+}
+.icon-weixin {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/weixin.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-weixin:hover {
+  background: url(../icon/weixin1.png) no-repeat center;
+}
+.icon-qq {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/qq.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-qq:hover {
+  background: url(../icon/qq1.png) no-repeat center;
+}
+.icon-mail {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/email.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+
+.icon-mail:hover {
+  background: url(../icon/email1.png) no-repeat center;
+}
+.icon-fb {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/facebook.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-fb:hover {
+  background: url(../icon/facebook1.png) no-repeat center;
+}
+.icon-luntan {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/luntan.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-luntan:hover {
+  background: url(../icon/luntan1.png) no-repeat center;
+}
+.icon-blog {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/blog.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-blog:hover {
+  background: url(../icon/blog1.png) no-repeat center;
+}
+.icon-google {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/google.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-google:hover {
+  background: url(../icon/google1.png) no-repeat center;
+}
+.icon-wordpress {
+  width: 40px;
+  height: 40px;
+  background: url(../icon/wordpress.png) no-repeat center;
+  transition: background .2s linear;
+  -webkit-transition: background .2s linear;
+  -moz-transition:  background .2s linear;
+  -o-transition: background .2s linear;
+  position: relative;
+}
+.icon-wordpress:hover {
+  background: url(../icon/wordpress1.png) no-repeat center;
+}
+.color {
+  width: 100%;
+  height:30%;
+  background-color: #40D8C8;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  position: relative;
+}
+.introduce {
+  width: 100%;
+  height: 20%;
+  background-color: #C4C4C4;
+  border-radius: 0 0 15px 15px;
+}
+
+/*icon body*/
+.weibo-body,
+.qq-body,
+.weixin-body,
+.mail-body,
+.fb-body{
+  position: absolute;
+  padding: 5px;
+  min-width: 200px;
+  top: auto;
+  left: 0;
+  bottom: 55px;
+  right: auto;
+  background-color: #fff;
+  filter: drop-shadow(0px 0px 6px #999);
+  -webkit-filter:drop-shadow(0px 0px 6px #999);
+  -moz-filter:drop-shadow(0px 0px 6px #999);
+  -o-filter:drop-shadow(0px 0px 6px #999);
+  z-index: 1001;
+  border-radius: 5px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: transform .3s ease-in;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  -moz-transition:  -moz-transform .3s ease-in;
+  -o-transition: -o-transform .3s ease-in;
+}
+.luntan-body,
+.blog-body,
+.google-body,
+.wordpress-body {
+  position: absolute;
+  padding: 5px 10px;
+  min-width: 200px;
+  top: auto;
+  left: 0;
+  bottom: 55px;
+  right: auto;
+  background-color: #fff;
+  filter: drop-shadow(0px 0px 6px #999);
+  -webkit-filter:drop-shadow(0px 0px 6px #999);
+  -moz-filter:drop-shadow(0px 0px 6px #999);
+  -o-filter:drop-shadow(0px 0px 6px #999);
+  z-index: 1001;
+  border-radius: 5px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: transform .3s ease-in;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  -moz-transition:  -moz-transform .3s ease-in;
+  -o-transition: -o-transform .3s ease-in;
+}
+.icon-weibo:hover .weibo-body{
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-qq:hover .qq-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-weixin:hover .weixin-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-luntan:hover .luntan-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-fb:hover .fb-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-mail:hover .mail-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-blog:hover .blog-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-google:hover .google-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.icon-wordpress:hover .wordpress-body {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform:scale(1);
+  -o-transform: scale(1);
+}
+.weibo-body:after,
+.qq-body:after,
+.weixin-body:after,
+.mail-body:after,
+.fb-body:after,
+.luntan-body:after,
+.blog-body:after,
+.google-body:after,
+.wordpress-body:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 8px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+}
+
+.icon-div span {
+  font-size: 12px;
+  line-height: 30px;
+  font-style: normal;
+}
+.icon-div span:first-child {
+  border-left: 4px solid #4ab0ff;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+span.copy {
+  margin-left: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.pagination {
+  margin: 10px auto;
+  text-align: center;
+}
+.more-button {
+  background-color: transparent;
+  border: 2px solid #f36;
+  border-radius: 5px;
+  color: #f36;
+  text-align: center;
+  outline: none;
+  padding: 10px 20px 10px 40px;
+  background: url("../icon/search1.png")no-repeat;
+  background-position: 10% 42%;
+}
+.more-button:hover {
+  color: #fff;
+  background: url("../icon/search2.png")no-repeat;
+  background-position: 10% 42%;
+  background-color: #f36;
+}
+.hide{
+  display: none;
+}
+.address span a {
+  text-decoration: underline;
+}
+.nicheng {
+  font: bold 18px/50px Arial;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+  color: #fff;
+  position: absolute;
+  bottom: 2px;
+  left: 155px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  /*浏览器以Mozilla内核，用以下兼容写法*/
+  -moz-transition: all 0.2s ease-in;
+  /*浏览器以Opera内核，用以下兼容写法*/
+  -o-transition: all 0.2s ease-in;
+  /*IE8兼容写法*/
+  -ms-transition: all 0.2s ease-in;
+  /*W3c标准写法*/
+  transition: all 0.2s ease-in;
+}
+/*.nicheng:hover {*/
+/*-webkit-transform:rotate(10deg);*/
+/*-moz-transform:rotate(10deg);*/
+/*-o-transform:rotate(10deg);*/
+/*-ms-transform:rotate(10deg);*/
+/*transform:rotate(10deg);*/
+/*color: black;*/
+/*}*/
+
+
+
+.cotn_principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  z-index: 999;
+  transition: transform .3s ease-in;
+  -webkit-transition: -webkit-transform .3s ease-in;
+  -moz-transition: -moz-transform .3s ease-in;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+/*登录注册模块*/
+.cont_centrar {
+  position: relative;
+  float: left;
+  width: 100%;
+
+}
+
+.cont_login {
+  position: relative;
+  width: 640px;
+  left: 50%;
+  margin-left: -320px;
+
+}
+
+.cont_back_info {
+  position: relative;
+  float: left;
+  width: 640px;
+  height: 280px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-top: 100px;
+  box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+.cont_forms {
+  position: absolute;
+  overflow: hidden;
+  top:100px;
+  left: 0px;
+  width: 320px;
+  height: 280px;
+  background-color: #eee;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cont_forms_active_login {
+  box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+  height: 420px;
+  top:20px;
+  left: 0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+}
+
+.cont_forms_active_sign_up {
+  box-shadow: 1px 10px 30px -10px rgba(0,0,0,0.5);
+  height: 420px;
+  top:20px;
+  left:320px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cont_img_back_grey {
+  position: absolute;
+  width: 950px;
+  top:-80px;
+  left: -116px;
+}
+
+.cont_img_back_grey > img {
+  width: 100%;
+  -webkit-filter: grayscale(100%);     filter: grayscale(100%);
+  opacity: 0.2;
+  animation-name: animar_fondo;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.cont_img_back_ {
+  position: absolute;
+  width: 950px;
+  top:-80px;
+  left: -116px;
+}
+
+.cont_img_back_ > img {
+  width: 100%;
+  opacity: 0.3;
+  animation-name: animar_fondo;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.cont_forms_active_login > .cont_img_back_ {
+  top:0px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cont_forms_active_sign_up > .cont_img_back_ {
+  top:0px;
+  left: -435px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+.cont_info_log_sign_up {
+  position: absolute;
+  width: 640px;
+  height: 280px;
+  top: 100px;
+  z-index: 1;
+}
+
+.col_md_login {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+
+.col_md_login > h2 {
+  font-weight: 400;
+  margin-top: 70px;
+  color: #757575;
+}
+
+.col_md_login > p {
+  font-weight: 400;
+  margin-top: 15px;
+  width: 80%;
+  color: #37474F;
+}
+
+.btn_login {
+  background-color: #FF9800;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  border-radius:3px;
+  box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.col_md_sign_up {
+  position: relative;
+  float: left;
+  width: 50%;
+}
+
+.cont_ba_opcitiy > h2 {
+  font-weight: 400;
+  color: #fff;
+}
+
+.cont_ba_opcitiy > p {
+  font-weight: 400;
+  margin-top: 15px;
+  color: #fff;
+}
+/* ----------------------------------
+background text
+------------------------------------
+ */
+.cont_ba_opcitiy {
+  position: relative;
+  background-color: rgba(187, 168, 170, 0.79);
+  width: 80%;
+  border-radius:3px ;
+  margin-top: 60px;
+  padding: 15px 0px;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.btn_sign_up {
+  background-color: #f44336;
+  border: none;
+  padding: 10px;
+  width: 200px;
+  border-radius:3px;
+  box-shadow: 1px 5px 20px -5px rgba(0,0,0,0.4);
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.cont_forms_active_sign_up {
+  z-index: 2;
+}
+
+
+@-webkit-keyframes animar_fondo {
+  from { -webkit-transform: scale(1) translate(0px);
+    -moz-transform: scale(1) translate(0px);
+    -ms-transform: scale(1) translate(0px);
+    -o-transform: scale(1) translate(0px);
+    transform: scale(1) translate(0px); }
+  to { -webkit-transform: scale(1.5) translate(50px);
+    -moz-transform: scale(1.5) translate(50px);
+    -ms-transform: scale(1.5) translate(50px);
+    -o-transform: scale(1.5) translate(50px);
+    transform: scale(1.5) translate(50px); }
+}
+@-o-keyframes identifier {
+  from { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5); }
+
+}
+@-moz-keyframes identifier {
+  from { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5); }
+
+}
+@keyframes identifier {
+  from { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  to { -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5); }
+}
+.cont_form_login {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  width: 320px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cont_forms_active_login {
+  z-index: 2;
+}
+.cont_forms_active_login  >.cont_form_login {
+}
+
+.cont_form_sign_up {
+  position: absolute;
+  width: 320px;
+  float: left;
+  opacity: 0;
+  display: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+
+.cont_form_sign_up > input {
+  text-align: left;
+  padding: 15px 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 260px;
+  border: none;
+  color: #757575;
+}
+
+.cont_form_sign_up > h2 {
+  margin-top: 50px;
+  font-weight: 400;
+  color: #757575;
+}
+
+
+.cont_form_login > input {
+  padding: 15px 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 260px;
+  border: none;
+  text-align: left;
+  color: #757575;
+}
+
+.cont_form_login > h2 {
+  margin-top: 110px;
+  font-weight: 400;
+  color: #757575;
+}
+.cont_form_login > a,.cont_form_sign_up > a  {
+  color: #757575;
+  position: relative;
+  float: left;
+  margin: 10px;
+  margin-left: 30px;
+}

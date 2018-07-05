@@ -1,0 +1,33 @@
+footer{
+    min-width: 1300px;
+    background: #2e3037;
+}
+.footer-one{
+    width: 1000px;height: 50px;
+    margin: 0 auto;
+    padding-top: 60px;
+    justify-content: space-between;
+    color: #fff;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.footer-one ul li{
+    float: left;
+    margin-right: 106px;
+}
+.footer-one ul li a {
+    font-size: 14px;
+    color: #8890a4;
+    transition: all .4s ease 0s;
+}
+.footer-one ul li a:hover{
+    color: #ff7c4d;
+}
+.footer-copyright {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid #393b41;
+    font-size: 12px;
+    color: #fff;
+}
